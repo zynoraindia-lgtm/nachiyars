@@ -1,0 +1,79 @@
+NACHIYAR CHIT FUND – RIGHT-SIDE PAGE IMAGES
+===========================================
+
+HOW TO ADD THE IMAGES
+1. Generate each image below in Gemini, ChatGPT, or any AI image tool.
+2. Save it with the exact file name shown (.jpg, .png or .webp all work).
+3. Put all files in this folder:  Nachiyar Website\assets\img\pages\
+4. Refresh the website (Ctrl + F5). Each page shows its image automatically,
+   inside the gold arch frame on the right side of the banner.
+   Until an image is added, that page keeps its current gold animation.
+
+SIZE FOR EVERY IMAGE: portrait, 4:5 ratio (for example 1200 x 1500 pixels).
+Keep the main subject in the centre/upper part. The top of the frame is an arch,
+so the corners get cut a little.
+
+Add this STYLE LINE to the end of every prompt, so all images match:
+"Photorealistic, premium editorial photography, warm cinematic lighting,
+rich deep maroon and antique gold colour palette, soft bokeh background,
+shallow depth of field, high detail, natural skin texture, no text, no logos,
+no watermark, portrait 4:5."
+
+For people: "South Indian (Tamil) people, natural brown skin tones, black hair,
+traditional-modern Tamil Nadu clothing, warm genuine smiles, natural and professional."
+
+
+1) home.jpg  – Home page
+A happy middle-class Tamil family (husband in a white shirt and veshti, wife in a
+maroon silk saree with gold border and jasmine flowers in her hair, a teenage
+daughter) sitting together at home, looking at a savings passbook and smiling,
+a small stack of gold coins on the table, warm evening light, brass lamp glowing
+softly in the background.
+
+2) about.jpg  – About Us
+A confident South Indian businesswoman in her 40s wearing an elegant maroon and
+gold silk saree, standing with arms gently folded in a premium modern office with
+warm wood and gold accents, a South Indian man in a formal shirt beside her,
+both smiling, trustworthy and professional.
+
+3) schemes.jpg  – Chit Schemes
+Close-up still life: shining gold coins, a traditional gold necklace, a small
+stack of Indian rupee notes and a leather savings passbook arranged on rich maroon
+silk cloth, a lit brass kuthu vilakku lamp in the soft-focus background.
+(No people.)
+
+4) calculator.jpg  – Calculator
+A young South Indian woman in a smart kurta, seated at a desk, using a calculator
+and writing in a notebook, a laptop and gold coins near her, focused and happy,
+warm office lighting.
+
+5) how-it-works.jpg  – How It Works
+A small group of South Indian men and women (mixed ages, shirts, sarees, churidars)
+seated around a table in a bright office meeting room taking part in a friendly
+chit auction meeting, one person raising a hand to bid, an official at the table
+with a register, warm and transparent atmosphere.
+
+6) why-chit-fund.jpg  – Why Chit Fund
+A smiling South Indian couple in their 30s (wife in a maroon saree, husband in a
+light shirt) standing in front of their newly opened small shop or new home
+entrance decorated with mango leaves (thoranam), holding keys, joyful and proud.
+
+7) faqs.jpg  – FAQs
+A friendly South Indian customer-service executive (woman, neat hair bun, maroon
+uniform blouse or saree) at a help desk, explaining something on a tablet to an
+elderly Tamil man in a white shirt and veshti, both smiling, warm office light.
+
+8) gallery.jpg  – Gallery
+Elegant still life: a glowing brass kuthu vilakku lamp, scattered gold coins,
+marigold and jasmine flowers on deep maroon silk, festive and premium.
+(No people.)
+
+9) careers.jpg  – Careers
+Three young South Indian professionals (two women in smart kurtas, one man in a
+formal shirt) working together at a laptop in a modern office, smiling and
+discussing, ID cards on lanyards, bright and positive.
+
+10) contact.jpg  – Contact Us
+A smiling South Indian receptionist (woman in a maroon saree with a gold border,
+wearing a headset) at a premium front desk, ready to help, a phone and notepad on
+the desk, warm welcoming lighting.

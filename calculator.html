@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chit Calculator | Nachiyar Chit Fund</title>
+<meta name="description" content="Calculate your chit instalment, auction prize amount, commission and dividend.">
+<meta name="theme-color" content="#4a0912">
+<meta property="og:title" content="Chit Calculator | Nachiyar Chit Fund">
+<meta property="og:description" content="Calculate your chit instalment, auction prize amount, commission and dividend.">
+<meta property="og:image" content="assets/img/logo-badge.png">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="canonical" href="https://nachiyarchitfundprivatelimited.com/calculator.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Mulish:wght@400;600;700;800;900&family=Noto+Sans+Tamil:wght@400;600;700;800&family=Noto+Serif+Tamil:wght@600;700&family=Playfair+Display:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<span hidden data-ta-title="சீட்டு கணக்கீடு | நாச்சியார் சிட் ஃபண்ட்"></span>
+<div id="site-header"></div>
+<main id="main">
+<h1 class="sr-only" data-ta="கணக்கீடு">Calculator</h1>
+
+<section class="section" style="padding-top:clamp(40px,5vw,60px)">
+  <div class="container calc">
+    <div class="calc-panel" data-reveal="left">
+      <h3><i>1</i><span data-ta="திட்டத்தைத் தேர்ந்தெடுங்கள்">Choose a scheme</span></h3>
+      <div class="form-row">
+        <div class="field"><label for="cFamily" data-ta="திட்டம்">Scheme</label><select id="cFamily"></select></div>
+        <div class="field"><label for="cVariant" data-ta="சீட்டுத் தொகை">Chit amount</label><select id="cVariant"></select></div>
+      </div>
+      <div class="result-grid">
+        <div class="result"><small id="pInstL">Monthly instalment</small><b id="pInst">₹0</b></div>
+        <div class="result"><small data-ta="காலம்">Duration</small><b id="pDur">—</b></div>
+        <div class="result"><small data-ta="உறுப்பினர்கள்">Members</small><b id="pMem">—</b></div>
+        <div class="result"><small data-ta="அதிகபட்ச செலுத்துதல்">Maximum payable</small><b id="pMax">₹0</b></div>
+      </div>
+      <div id="pPayGet"></div>
+      <div style="margin-top:20px"><a class="btn btn-gold" id="pEnq" href="https://wa.me/919043420099" target="_blank" rel="noopener" data-ta="இந்த திட்டம் பற்றி விசாரிக்க">Enquire about this plan</a></div>
+    </div>
+
+    <div class="calc-panel" data-reveal="right">
+      <h3><i>2</i><span data-ta="ஏலக் கணக்கீடு">Auction calculator</span></h3>
+      <div class="field"><label for="aAmt"><span data-ta="சீட்டுத் தொகை">Chit amount</span><output id="oAmt">₹1,00,000</output></label><input type="range" id="aAmt" min="25000" max="2000000" step="25000" value="100000"></div>
+      <div class="field"><label for="aMem"><span data-ta="உறுப்பினர்கள் / தவணைகள்">Members / instalments</span><output id="oMem">10</output></label><input type="range" id="aMem" min="10" max="100" step="5" value="10"></div>
+      <div class="field"><label for="aBid"><span data-ta="ஏலத் தள்ளுபடி">Auction discount (bid)</span><output id="oBid">10%</output></label><input type="range" id="aBid" min="0" max="30" step="1" value="10"></div>
+      <div class="result-grid">
+        <div class="result big"><small data-ta="ஏலம் எடுத்தவர் பெறும் தொகை">Prize amount for the winner</small><b id="rPrize">₹0</b></div>
+        <div class="result"><small data-ta="ஏலத் தள்ளுபடி">Auction discount</small><b id="rDisc">₹0</b></div>
+        <div class="result"><small data-ta="நிறுவனக் கமிஷன் (5%)">Company commission (5%)</small><b id="rComm">₹0</b></div>
+        <div class="result good"><small data-ta="ஒருவருக்கு ஈவுத்தொகை">Dividend per member</small><b id="rDiv">₹0</b></div>
+        <div class="result"><small data-ta="முழுத் தவணை">Full instalment</small><b id="rInst">₹0</b></div>
+        <div class="result good" style="grid-column:1/-1"><small data-ta="ஈவுத்தொகைக்குப் பின் செலுத்த வேண்டியது">You pay after dividend</small><b id="rNext">₹0</b></div>
+      </div>
+      <div class="split-bar" id="splitBar" aria-hidden="true"><i style="background:var(--maroon-700)"></i><i style="background:var(--gold-700)"></i><i style="background:var(--green)"></i></div>
+      <div class="legend"><span><i style="background:var(--maroon-700)"></i><span data-ta="வெற்றியாளருக்கு">To winner</span></span><span><i style="background:var(--gold-700)"></i><span data-ta="கமிஷன்">Commission</span></span><span><i style="background:var(--green)"></i><span data-ta="உறுப்பினர்களுக்கு ஈவுத்தொகை">Dividend to members</span></span></div>
+      <p class="table-note" style="border:0;padding:16px 0 0"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span data-ta="இது ஒரு மாதிரி கணக்கீடு மட்டுமே. ஏலத் தள்ளுபடியிலிருந்து 5% கமிஷன் போக மீதி அனைத்து உறுப்பினர்களுக்கும் சமமாக பிரிக்கப்படுகிறது என்ற அடிப்படையில் கணக்கிடப்பட்டது.">This is an illustration only. It assumes the 5% commission comes out of the auction discount and the rest is shared equally by all members.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-reveal="up" data-ta="கணக்கு எப்படி?">How the maths works</span>
+      <h2 class="h-title" data-reveal="up" data-ta="மூன்று <em>எளிய</em> கணக்குகள்">Three <em>simple</em> sums</h2>
+    </div>
+    <div class="grid g-3" data-stagger="flip">
+      <div class="feature"><div class="f-icon"><svg viewBox="0 0 24 24"><path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></div><h3 data-ta="தள்ளுபடி">Discount</h3><p data-ta="சீட்டுத் தொகை × ஏல சதவீதம். உதா: ₹1,00,000 × 10% = ₹10,000.">Chit amount × bid %. Example: ₹1,00,000 × 10% = ₹10,000.</p></div>
+      <div class="feature"><div class="f-icon"><svg viewBox="0 0 24 24"><path d="M7 4h11M7 8.5h11M7 4c6 0 7 4.5 4 7.5S7 13 7 13l8 8"/></svg></div><h3 data-ta="வெற்றியாளர் பெறுவது">Winner receives</h3><p data-ta="சீட்டுத் தொகை − தள்ளுபடி. உதா: ₹1,00,000 − ₹10,000 = ₹90,000.">Chit amount − discount. Example: ₹1,00,000 − ₹10,000 = ₹90,000.</p></div>
+      <div class="feature"><div class="f-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.3-6 6.5-6s5.9 2.4 6.5 6"/><circle cx="17" cy="9" r="2.6"/></svg></div><h3 data-ta="ஈவுத்தொகை">Dividend</h3><p data-ta="(தள்ளுபடி − 5% கமிஷன்) ÷ உறுப்பினர்கள். உதா: (₹10,000 − ₹5,000) ÷ 10 = ₹500.">(Discount − 5% commission) ÷ members. Example: (₹10,000 − ₹5,000) ÷ 10 = ₹500.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight"><div class="container"><div class="cta-band" data-reveal="zoom">
+<div><h2 data-ta="உங்கள் சேமிப்பு பயணத்தை இன்றே தொடங்குங்கள்">Start your savings journey today</h2>
+<p data-ta="உங்களுக்கு பொருத்தமான சீட்டு எது என்று தெரியவில்லையா? அழையுங்கள் அல்லது வாட்ஸ்அப் செய்யுங்கள் — எளிய தமிழில் விளக்குகிறோம்.">Not sure which chit suits you? Call or WhatsApp us and we will explain everything in simple words.</p></div>
+<div class="cta-actions"><a class="btn btn-gold" href="tel:+918056724462"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>8056724462</a>
+<a class="btn btn-wa" href="https://wa.me/919043420099" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>9043420099</a></div>
+</div></div></section>
+
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
