@@ -73,6 +73,7 @@
     home: '<path d="M3 11l9-7 9 7"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-6h4v6"/>',
     plane: '<path d="M2 16l20-8-4 12-6-4-3 4v-5z"/><path d="M12 16l10-8"/>',
     target: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/>',
+    landline: '<path d="M2.5 9.6C4.6 6.6 8.1 5 12 5s7.4 1.6 9.5 4.6l-1.9 2.3-3.4-1.1V8.7a11 11 0 0 0-8.4 0v2.1l-3.4 1.1z"/><path fill-rule="evenodd" d="M7.2 12h9.6l3.5 7.6c.3.7-.2 1.4-.9 1.4H4.6c-.7 0-1.2-.7-.9-1.4zM12 13.8a2.6 2.6 0 1 0 0 5.2 2.6 2.6 0 0 0 0-5.2z"/>',
     phoneS: '<path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2 4.6 1.4V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5l1.3 4.6z"/>',
     info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/>',
     check: '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
@@ -111,6 +112,7 @@
     return '' +
       '<div class="topbar"><div class="container">' +
       '<div class="tb-left"><a href="tel:' + C.phoneIntl + '">' + ico("phone") + " " + C.phone + "</a>" +
+      '<a class="tb-land" href="tel:' + C.landlineIntl + '">' + ico("landline") + " " + C.landline + "</a>" +
       '<a href="' + waBase + '" target="_blank" rel="noopener">' + ico("wa") + " " + C.whatsapp + "</a>" +
       '<a class="tb-mail" href="mailto:' + C.email + '">' + ico("mail") + " " + C.email + "</a></div>" +
       '<div class="tb-right"><span class="tb-tag">நம்பிக்கையுடன்... வளர்ச்சியின் வழியில்... உங்கள் நலனுக்காக...</span>' +
@@ -146,6 +148,7 @@
       '<div><h4 data-ta="எங்களை தொடர்பு கொள்ள">Get in Touch</h4><ul class="f-contact">' +
       '<li>' + ico("pin") + '<a href="' + C.mapUrl + '" target="_blank" rel="noopener" data-ta="' + C.address.ta + '">' + C.address.en + "</a></li>" +
       '<li>' + ico("phone") + '<span><a href="tel:' + C.phoneIntl + '">' + C.phone + '</a> <small data-ta="(மொபைல்)">(Mobile)</small></span></li>' +
+      '<li>' + ico("landline") + '<span><a href="tel:' + C.landlineIntl + '">' + C.landline + '</a> <small data-ta="(லேண்ட்லைன்)">(Landline)</small></span></li>' +
       '<li>' + ico("wa") + '<span><a href="' + waBase + '" target="_blank" rel="noopener">' + C.whatsapp + '</a> <small data-ta="(வாட்ஸ்அப்)">(WhatsApp)</small></span></li>' +
       '<li>' + ico("mail") + '<a href="mailto:' + C.email + '" style="word-break:break-all">' + C.email + "</a></li>" +
       '<li>' + ico("globe") + '<a href="' + C.websiteUrl + '" target="_blank" rel="noopener">' + C.website + "</a></li>" +
@@ -543,7 +546,7 @@
       if (limit) list = list.slice(0, limit);
       box.innerHTML = list.length ? list.map(function (f, i) {
         return '<div class="faq" data-reveal="up" style="--d:' + (i * 0.05).toFixed(2) + 's"><button class="faq-q" aria-expanded="false" id="fq' + i + '"><span>' + t(f.q) + '</span><span class="pm" aria-hidden="true"></span></button><div class="faq-a" role="region" aria-labelledby="fq' + i + '"><div><p>' + t(f.a) + "</p></div></div></div>";
-      }).join("") : '<p style="text-align:center;color:var(--muted)">' + L("No matching questions. Try another word, or call us on ", "பொருந்தும் கேள்வி இல்லை. வேறு சொல்லில் தேடுங்கள், அல்லது அழையுங்கள்: ") + C.phone + "</p>";
+      }).join("") : '<p style="text-align:center;color:var(--muted)">' + L("No matching questions. Try another word, or call us on ", "பொருந்தும் கேள்வி இல்லை. வேறு சொல்லில் தேடுங்கள், அல்லது அழையுங்கள்: ") + C.phone + " / " + C.landline + "</p>";
       box.querySelectorAll(".faq-q").forEach(function (b) {
         b.addEventListener("click", function () {
           var f = b.parentNode, open = !f.classList.contains("open");
